@@ -2,24 +2,24 @@
 
 import { HiMenuAlt1 } from "react-icons/hi";
 import Logo from "./Logo";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
 import Link from "next/link";
 import { Navlinks } from "@/constants";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { X } from "lucide-react";
 
 const MobileNavbar = () => {
   const pathname = usePathname();
+  const [isToggle, setIsToggle] = useState(false);
 
   return (
-    <nav className="md:hidden flex items-center justify-between p-2">
+    <nav className="md:hidden flex relative  items-center justify-between p-2">
       <Logo />
-      <Sheet>
-        <SheetTrigger>
-          <HiMenuAlt1 className="w-6 h-6 text-black" />
-        </SheetTrigger>
-        <SheetContent side={"right"} className="p-0 bg-white">
-          <ul className="flex flex-col items-start gap-2 p-6 mt-4">
+      {isToggle ? (
+        <div className="flex w-fit h-fit absolute py-10 px-5 justify-between top-2 rounded-lg border  z-10 right-2 gap-10 bg-white">
+          <ul className="flex flex-col flex-1 items-center  gap-2 ">
             {Navlinks.map((item, index) => (
               <li
                 key={index}
@@ -28,6 +28,7 @@ const MobileNavbar = () => {
                   pathname === item.path &&
                     "text-sky-700 bg-sky-200/20 hover:bg-sky-200/20 hover:text-sky-700"
                 )}
+                onClick={() => setIsToggle(false)}
               >
                 <Link
                   href={item.path}
@@ -39,8 +40,13 @@ const MobileNavbar = () => {
               </li>
             ))}
           </ul>
-        </SheetContent>
-      </Sheet>
+          {/* <X className="w-8 h-8 mt-2 text-black" /> */}
+        </div>
+      ) : (
+        <button onClick={() => setIsToggle((prev) => !prev)}>
+          <HiMenuAlt1 className="w-6 h-6 text-black" />
+        </button>
+      )}
     </nav>
   );
 };
