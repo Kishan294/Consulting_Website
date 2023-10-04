@@ -46,13 +46,10 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row items-start justify-between py-20 lg:px-40 px-5">
-      <div className="lg:w-[20vw] mb-4 lg:mb-0">
-        <h1 className="lg:text-5xl text-2xl font-semibold text-[var(--heading-color)]">
-          Contact Us
-        </h1>
-        {/* <ContactFormCard /> */}
-      </div>
+    <div className="flex flex-col items-center justify-between mx-auto w-2/3 py-20 lg:px-40 px-5">
+      <h1 className="text-4xl text-center font-semibold mb-4 border-b-2 pb-4 text-[var(--heading-color)]">
+        Contact Our friendly Team
+      </h1>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
