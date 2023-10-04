@@ -37,14 +37,14 @@ const FramerLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <motion.div className="relative">
         <div
-          className="cursor flex justify-center items-center"
+          className="cursor hidden lg:block"
           style={{
             top: coordinates.y,
             left: coordinates.x,
           }}
         />
         <div
-          className="cursor2"
+          className="cursor2 hidden lg:block"
           style={{
             top: coordinates.y,
             left: coordinates.x + 15,
