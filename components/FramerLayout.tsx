@@ -32,7 +32,6 @@ const FramerLayout = ({ children }: { children: React.ReactNode }) => {
     };
   }, [coordinates]);
 
-  console.log(coordinates);
   return (
     <>
       <motion.div className="relative">
