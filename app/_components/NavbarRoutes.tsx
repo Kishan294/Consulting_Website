@@ -5,7 +5,7 @@ import NavbarItems from "./NavbarItems";
 
 const NavbarRoutes = () => {
   return (
-    <ul className="flex items-center lg:gap-8 gap-2">
+    <ul className="flex items-center lg:gap-8 gap-[2]">
       {Navlinks.map((item, index) => (
         <NavbarItems
           key={index}

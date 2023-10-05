@@ -66,7 +66,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="bg-white px-40 dark:bg-gray-900">
+    <section className="bg-white lg:px-40 px-5 dark:bg-gray-900">
       <div className="container px-6 py-12 mx-auto">
         <div>
           <p className="font-medium text-blue-500 dark:text-blue-400">
@@ -144,10 +144,13 @@ const ContactForm = () => {
                   className="input_style h-32"
                   placeholder="Message"
                   {...form.register("message")}
-                ></textarea>
+                />
               </div>
 
-              <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+              <button
+                className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
+                disabled={isValid && isSubmitting}
+              >
                 Send message
               </button>
             </form>

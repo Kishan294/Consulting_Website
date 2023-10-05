@@ -19,7 +19,7 @@ const NavbarItems = ({ icon: Icon, path, title }: NavbarItemsProps) => {
       <Link
         href={path}
         className={cn(
-          "flex items-center lg:gap-2 gap-1 text-[#bdbdcb] hover:text-white hover:bg-[var(--main-color)]  transition-all font-semibold duration-300 rounded-full px-3 py-1 ease-in-out lg:text-base text-xs",
+          "flex items-center lg:gap-2 gap-1 text-[#bdbdcb] hover:text-white hover:bg-[var(--main-color)]  transition-all lg:font-semibold duration-300 rounded-full px-2 py-1 ease-in-out lg:text-base  text-xs",
           isActive && "text-white bg-[var(--main-color)] "
         )}
       >

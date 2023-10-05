@@ -4,7 +4,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 px-40">
+    <section className="bg-white dark:bg-gray-900 lg:px-40 px-5">
       <div className="container px-6 py-10 mx-auto">
         <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
           What our <span className="text-blue-500 ">clients</span> say

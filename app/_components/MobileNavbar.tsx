@@ -15,7 +15,7 @@ const MobileNavbar = () => {
   const [isToggle, setIsToggle] = useState(false);
 
   return (
-    <nav className="md:hidden flex relative  items-center justify-between p-2">
+    <nav className="md:hidden fixed flex top-0 left-0 right-0 bg-white/60 z-10 backdrop-blur-lg  items-center justify-between p-2">
       <Logo />
       {isToggle ? (
         <div className="flex w-fit h-fit absolute py-10 px-5 justify-between top-2 rounded-lg border  z-10 right-2 gap-10 bg-white">
