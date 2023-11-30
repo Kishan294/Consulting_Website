@@ -3,7 +3,7 @@ import ServicesCard from "./ServicesCard";
 
 const Services = () => {
   return (
-    <div className="text-center lg:px-40 px-5 py-10 space-y-4 ">
+    <div className="text-center lg:px-40 px-5 py-20 space-y-4 ">
       <div>
         <h1 className="text-3xl font-semibold">Our Services</h1>
         <p className="text-gray-600 text-lg">
